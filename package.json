@@ -4,11 +4,13 @@
   "description": "Claire Squires' portfolio",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
+    "build": "npm run sass && npm run webpack",
     "jest:ci": "jest --json --outputFile=test/results/jest-test-results.json test/components/",
+    "sass": "node-sass ./sass/index.scss --output-style compressed -o ./public/styles",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "npm run jest:ci",
-    "test:coverage": "jest --coverage --colors"
+    "test:coverage": "jest --coverage --colors",
+    "webpack": "webpack --config ./webpack.config.js"
   },
   "author": "Claire Squire",
   "devDependencies": {
@@ -28,6 +30,7 @@
     "babel-runtime": "^6.26.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "node-sass": "^4.13.0",
     "react-test-renderer": "^16.11.0",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
