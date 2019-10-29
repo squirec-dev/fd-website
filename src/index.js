@@ -1,17 +1,8 @@
-// console.log('yup, i\'m working');
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-class MessageComponent extends React.Component {
-    render() {
-        return (
-            <div>{this.props.message}</div>
-        );
-    }
-}
+import App from "./components/App";
 
-// Render an instance of MessageComponent into document.getElementById
 ReactDOM.render(
-    <MessageComponent message="Hello!" />,
+    React.createElement(App, {message: 'foo bar'}),
     document.getElementById('root')
 );
