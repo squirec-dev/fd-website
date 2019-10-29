@@ -4,7 +4,7 @@ const App = ({
     message,
 }) => {
     return (
-        <div>{message} World woo!</div>
+        <div data-test="fd-app__message">{message}</div>
     );
 };
 
