@@ -1,3 +1,7 @@
-public/*
-node_modules/*
+
+# Public
+public/styles
+
+# Dependency directories
+node_modules
 test/reports

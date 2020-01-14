@@ -1,0 +1,51 @@
+$grid-columns: 12;
+$grid-gutter: 3%;
+$grid-spacing: 16px;
+
+.fd-grid_column,
+.fd-grid_column-reverse,
+.fd-grid_row,
+.fd-grid_row-reverse {
+	display: flex;
+}
+.fd-grid_column {
+	flex-direction: column;
+}
+.fd-grid_column-reverse {
+	flex-direction: column;
+}
+.fd-grid_row {
+	flex-direction: row;
+}
+.fd-grid_row-reverse {
+	flex-direction: row-reverse;
+}
+
+
+// Columns have margins by default
+[class^="fd-grid_col"]:not([class$="--last"]):not([class$="12"]):not([class$="--flush"]) {
+	margin-right: $grid-gutter;
+}
+[class^="fd-grid_col"]:not([class$="--flush"]) {
+	margin-bottom: $grid-spacing;
+}
+
+@for $i from 1 through $grid-columns {
+  	.fd-grid_col#{$i} {
+	  	flex-basis: percentage($i / $grid-columns);
+	  	min-height: 30px;
+     	padding-right: $grid-gutter;
+     	background: #444;
+		border: 2px solid #111;
+		box-sizing: border-box;
+  	}
+}
+
+.fd-grid_col {
+	flex: 1;
+    padding-right: $grid-gutter;
+	background: #feb66d;
+	min-height: 30px;
+	border: 2px solid #111;
+	box-sizing:border-box;
+}

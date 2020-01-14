@@ -6,8 +6,19 @@ const app = {
                 test: /\.(js|jsx)$/,
                 include: __dirname + '/src',
                 exclude: /node_modules/,
-                use: ['babel-loader']
-            }
+                use: [
+                    'babel-loader',
+                ],
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader',
+                ],
+            },
         ]
     },
     resolve: {
@@ -20,7 +31,7 @@ const app = {
     },
     devServer: {
         contentBase: './public'
-    }
+    },
 };
 
 module.exports = [app];
