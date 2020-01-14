@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run sass && npm run webpack",
+    "build:watch": "./node_modules/.bin/webpack --mode development --watch",
     "jest:ci": "jest --json --outputFile=test/results/jest-test-results.json test/components/",
+    "jest:watch": "./node_modules/.bin/jest test/components/ --colors --watch",
     "sass": "node-sass ./sass/index.scss --output-style compressed -o ./public/styles",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "npm run jest:ci",
