@@ -1,0 +1,9 @@
+
+:root {
+    --color-primary: hsl(195, 66%, 56%);
+    --color-primary-light: hsl(195, 66%, 66%);
+    --color-primary-lighter: hsl(195, 66%, 76%);
+
+    --primary-border: var(--color-primary);
+    --primary-background: var(--color-primary-lighter);
+}

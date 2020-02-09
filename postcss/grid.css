@@ -1,20 +1,20 @@
-.row,
-.row-reverse,
-.column,
-.column-reverse {
+.fd-grid__row,
+.fd-grid__row-reverse,
+.fd-grid__column,
+.fd-grid__column-reverse {
 	display: flex;
 }
 
-.row {
+.fd-grid__row {
 	flex-direction: row;
 }
-.row-reverse {
+.fd-grid__row-reverse {
 	flex-direction: row-reverse;
 }
-.column {
+.fd-grid__column {
 	flex-direction: column;
 }
-.column-reverse {
+.fd-grid__column-reverse {
 	flex-direction: column;
 }
 
@@ -22,19 +22,13 @@ $grid-columns: 12;
 $grid-gutter: 3%;
 
 @for $i from 1 to $grid-columns {
-  .col$i {
-	  flex-basis: percentage($(i), $(grid-columns));
-	  min-height: 30px;
-     padding-right: $(grid-gutter);
-     background: #444;
-	  border: 2px solid #111
-  }
+  	.fd-grid__col$i {
+	  	flex-basis: percentage($(i), $(grid-columns));
+     	padding-right: $(grid-gutter);
+  	}
 }
 
-.col {
-	  flex: 1;
-     padding-right: $grid-gutter;
-     background: #feb66d;
-	  min-height: 30px;
-	  border: 2px solid #111;
+.fd-grid__col {
+	flex: 1;
+    padding-right: $grid-gutter;
 }
