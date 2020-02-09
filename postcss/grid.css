@@ -1,0 +1,40 @@
+.row,
+.row-reverse,
+.column,
+.column-reverse {
+	display: flex;
+}
+
+.row {
+	flex-direction: row;
+}
+.row-reverse {
+	flex-direction: row-reverse;
+}
+.column {
+	flex-direction: column;
+}
+.column-reverse {
+	flex-direction: column;
+}
+
+$grid-columns: 12;
+$grid-gutter: 3%;
+
+@for $i from 1 to $grid-columns {
+  .col$i {
+	  flex-basis: percentage($(i), $(grid-columns));
+	  min-height: 30px;
+     padding-right: $(grid-gutter);
+     background: #444;
+	  border: 2px solid #111
+  }
+}
+
+.col {
+	  flex: 1;
+     padding-right: $grid-gutter;
+     background: #feb66d;
+	  min-height: 30px;
+	  border: 2px solid #111;
+}

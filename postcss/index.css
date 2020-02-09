@@ -1,7 +1,9 @@
+@import './grid';
+
 .intro {
   background: blue;
   border-radius: 10px;
   box-shadow: 5px 10px #888888;
     display: flex;
   flex-flow: row wrap;
-} 
+}
