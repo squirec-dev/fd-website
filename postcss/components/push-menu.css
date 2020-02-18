@@ -17,18 +17,32 @@ $menuWidth: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
+    display: flex;
     width: $menuWidth;
-    background: var(--color-primary);
+    align-items: center;
+    text-align: center;
+    background: var(--color-primary-dark);
     transition: all 0.3s ease;
     z-index: 1000
 }
 
 .fd-menu__panel--open {
-    left: 0;
+    right: 0;
     visibility: visible;
 }
 
 .fd-menu__panel--closed {
-    left: -$menuWidth;
+    right: -$menuWidth;
     visibility: hidden;
+}
+
+.fd-menu__link-wrapper {
+    width: 100%;
+    line-height: 40px;
+}
+
+.fd-menu__link {
+    color: var(--color-white);
+    font-size: 20px;
+    text-decoration: none;
 }

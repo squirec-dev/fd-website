@@ -21,18 +21,26 @@ const PushMenu = () => {
                 tabIndex={toggle ? "0" : "-1"}
                 aria-hidden={!toggle}
             >
-                <ul>
+                <ul className="fd-menu__link-wrapper">
                     <li>
-                        <a href="#homePage" data-test="fd-menu__link">Home</a>
+                        <a href="#homePage" className="fd-menu__link" data-test="fd-menu__link">
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <a href="#aboutPage" data-test="fd-menu__link">About</a>
+                        <a href="#aboutPage" className="fd-menu__link" data-test="fd-menu__link">
+                            About
+                        </a>
                     </li>
                     <li>
-                        <a href="#workPage" data-test="fd-menu__link">Work</a>
+                        <a href="#workPage" className="fd-menu__link" data-test="fd-menu__link">
+                            Work
+                        </a>
                     </li>
                     <li>
-                        <a href="#contactPage" data-test="fd-menu__link">Contact</a>
+                        <a href="#contactPage" className="fd-menu__link" data-test="fd-menu__link">
+                            Contact
+                        </a>
                     </li>
                 </ul>
             </nav>
