@@ -19,19 +19,20 @@ const PushMenu = () => {
                 className={`fd-menu__panel ${toggle ? "fd-menu__panel--open" : "fd-menu__panel--closed"}`}
                 data-test="fd-menu__panel"
                 tabIndex={toggle ? "0" : "-1"}
+                aria-hidden={!toggle}
             >
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#homePage" data-test="fd-menu__link">Home</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#aboutPage" data-test="fd-menu__link">About</a>
                     </li>
                     <li>
-                        <a href="#work">Work</a>
+                        <a href="#workPage" data-test="fd-menu__link">Work</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contactPage" data-test="fd-menu__link">Contact</a>
                     </li>
                 </ul>
             </nav>

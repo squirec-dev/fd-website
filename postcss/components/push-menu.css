@@ -25,10 +25,10 @@ $menuWidth: 100%;
 
 .fd-menu__panel--open {
     left: 0;
-    display: block;
+    visibility: visible;
 }
 
 .fd-menu__panel--closed {
     left: -$menuWidth;
-    display: none;
+    visibility: hidden;
 }

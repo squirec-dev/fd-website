@@ -63,4 +63,17 @@ describe('Push Menu', () => {
             ).toBe(true);
         });
     });
+
+    describe('Content', () => {
+        it('Displays page links', () => {
+            const component = render();
+            component
+                .find('[data-test="fd-menu__control"]')
+                .simulate('click');
+            expect(component
+                .find('[data-test="fd-menu__link"]')
+                .length
+            ).toBe(4);
+        });
+    });
 });
