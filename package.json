@@ -1,6 +1,6 @@
 {
   "name": "fluid-designs",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Claire Squires' portfolio",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build:watch": "./node_modules/.bin/webpack --mode development --watch",
     "jest:ci": "jest --json --outputFile=test/results/jest-test-results.json test/components/",
     "postcss": "postcss postcss/index.css -o ./public/styles/index.css",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development --no",
     "test": "npm run jest:ci",
     "test:coverage": "jest --coverage --colors",
     "webpack": "webpack --config ./webpack.config.js"
