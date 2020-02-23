@@ -1,22 +1,20 @@
-import React, {
-    lazy,
-} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import HomePage from "./pages/home";
+import AboutPage from "./pages/about";
+import WorkPage from "./pages/work";
+import ContactPage from "./pages/contact";
 import PushMenu from "./components/push-menu";
 
 const App = () => {
-    // const AboutPage = lazy(() => import("./pages/about"));
-    // const WorkPage = lazy(() => import("./pages/work"));
-    // const ContactPage = lazy(() => import("./pages/contact"));
     return (
         <React.Fragment>
             <PushMenu />
             <main>
                 <HomePage />
-                {/* <AboutPage />
+                <AboutPage />
                 <WorkPage />
-                <ContactPage /> */}
+                <ContactPage />
             </main>
         </React.Fragment>
     );

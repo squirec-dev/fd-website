@@ -11,6 +11,17 @@ h1 {
     line-height: 1.25em;
 }
 
+h2 {
+    color: var(--color-primary);
+    font-family: 'Lobster', cursive;
+    font-size: 80px;
+    line-height: 1.25em;
+}
+
+p {
+    margin-bottom: var(--spacing-xs);
+}
+
 
 a {
 	position: relative;
