@@ -8,13 +8,28 @@ const WorkPage = () => (
         <p>Meanwhile, why not check out my pages;</p>
         <ul>
             <li>
-                <a href="https://github.com/SparrowSquire">github.com/SparrowSquire</a>
+                <a href="https://github.com/SparrowSquire"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                >
+                    github.com/SparrowSquire
+                </a>
             </li>
             <li>
-                <a href="https://jsfiddle.net/SquireC_dev">jsfiddle.net/SquireC_dev</a>
+                <a href="https://jsfiddle.net/user/SquireC_dev/fiddles/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                >
+                    jsfiddle.net/user/SquireC_dev/fiddles/
+                </a>
             </li>
             <li>
-                <a href="https://codepen.io/SquireC_dev">codepen.io/SquireC_dev</a>
+                <a href="https://codepen.io/SquireC_dev"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                >
+                    codepen.io/SquireC_dev
+                </a>
             </li>
         </ul>
     </section>
