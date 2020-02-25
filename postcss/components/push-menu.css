@@ -1,7 +1,11 @@
 $menuWidth: 100%;
 
 .fd-menu {
-    min-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     text-align: right;
     background-color: var(--color-primary);
     box-sizing: border-box;
