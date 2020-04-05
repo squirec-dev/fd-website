@@ -9,13 +9,20 @@ import PushMenu from "./components/push-menu";
 const App = () => {
     return (
         <React.Fragment>
-            <PushMenu />
+            <header>
+                <PushMenu />
+            </header>
             <main>
-                <HomePage />
-                <AboutPage />
-                <WorkPage />
-                <ContactPage />
+                <div className="container">
+                    <HomePage />
+                    <AboutPage />
+                    <WorkPage />
+                    <ContactPage />
+                </div>
             </main>
+            <footer>
+                <div className="container"></div>
+            </footer>
         </React.Fragment>
     );
 };

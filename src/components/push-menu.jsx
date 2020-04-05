@@ -29,7 +29,7 @@ const PushMenu = () => {
                         <li>
                             <a
                                 href="#homePage"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => setToggle(false)}
                                 className="fd-menu__link"
                                 data-test="fd-menu__link"
                             >
@@ -39,7 +39,7 @@ const PushMenu = () => {
                         <li>
                             <a
                                 href="#aboutPage"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => setToggle(false)}
                                 className="fd-menu__link"
                                 data-test="fd-menu__link"
                             >
@@ -49,7 +49,7 @@ const PushMenu = () => {
                         <li>
                             <a
                                 href="#workPage"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => setToggle(false)}
                                 className="fd-menu__link"
                                 data-test="fd-menu__link"
                             >
@@ -59,7 +59,7 @@ const PushMenu = () => {
                         <li>
                             <a
                                 href="#contactPage"
-                                onClick={() => setToggle(!toggle)}
+                                onClick={() => setToggle(false)}
                                 className="fd-menu__link"
                                 data-test="fd-menu__link"
                             >

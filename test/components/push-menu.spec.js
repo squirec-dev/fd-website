@@ -80,5 +80,22 @@ describe('Push Menu', () => {
                 .length
             ).toBe(4);
         });
+
+        it('Closes menu on link click', () => {
+            const component = render();
+            component
+                .find('[data-test="fd-menu__link"]')
+                .at(0)
+                .simulate('click');
+            expect(component
+                .find('[data-test="fd-menu__panel"]')
+                .props()
+                .className
+            ).toContain('fd-menu__panel--closed');
+            expect(component
+                .find('[data-test="fd-menu__panel"]')
+                .prop('aria-hidden')
+            ).toBe(true);
+        });
     });
 });
