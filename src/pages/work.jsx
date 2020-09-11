@@ -8,7 +8,7 @@ const WorkPage = () => (
         <p>Meanwhile, why not check out my pages;</p>
         <ul>
             <li>
-                <a href="https://github.com/SparrowSquire"
+                <a href="https://github.com/squirec-dev"
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                 >
