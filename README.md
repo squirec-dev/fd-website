@@ -41,11 +41,17 @@ PATCH bump for bug fixes.
 
 [BEM](http://getbem.com/) naming convention; **B**lock, **E**lement, **M**odifier.
 
-Commit messages should use the format `type: description`. Refer here for type options. 
+Commit messages should use the format `type: description`. Refer [here](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum) for type options. 
 
 ## Lighthouse
 
 Lighthouse is an important tool to review changes. Pre-commit, this should be run and documented here:
+
+<details>
+
+![Report: 13-09-2020](/public/images/lighthouse-report--13-09-2020.PNG)
+
+</details>
 
 ## Finally
 Thanks for taking a look! Feel free to connect with me on LinkedIn or just drop me a message :ocean: 
