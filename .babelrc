@@ -1,13 +1,3 @@
 {
-    "plugins": [
-        "transform-builtin-classes",
-        "dynamic-import-node",
-        "syntax-object-rest-spread",
-        "transform-class-properties",
-        "transform-es2015-classes"
-    ],
-    "presets": [
-        "react",
-        "babel-preset-env"
-    ]
+    "presets": ["next/babel"]
 }
