@@ -1,4 +1,4 @@
-const WorkPage = () => (
+const WorkPage = (): React.ReactElement => (
     <section id="workPage">        
 		<div className="container">
             <h2>My Work</h2>

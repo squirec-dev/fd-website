@@ -1,4 +1,4 @@
-const ContactPage = () => (
+const ContactPage = (): React.ReactElement => (
     <section id="contactPage">
 		<div className="container">
             <h2>Get in touch!</h2>

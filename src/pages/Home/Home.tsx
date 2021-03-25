@@ -1,6 +1,6 @@
 import Hero from '../../components/Hero';
 
-const HomePage = () => (
+const HomePage = (): React.ReactElement => (
     <section id="homePage">
 		<div className="container">
             <Hero

@@ -3,10 +3,14 @@ import { render, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import PushMenu from '../index';
 
+interface PropTypes {
+    customProps?: Record<string, any>
+}
+
 describe('PushMenu:', () => {
-    const renderComponent = customProps =>
+    const renderComponent = () =>
         render(
-            <PushMenu {...customProps} />
+            <PushMenu />
         );
     
     afterEach(() => {

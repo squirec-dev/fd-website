@@ -1,9 +1,15 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, RenderResult } from '@testing-library/react';
 import Hero from '../index';
 
+const defaultProps = {
+    title: 'Title',
+    subtitle: 'Subtitle',
+    strapline: 'Strapline',
+}
+
 describe('Hero:', () => {
-    const renderComponent = customProps =>
+    const renderComponent = (customProps = defaultProps): RenderResult =>
         render(
             <Hero title='Hello World!' {...customProps} />
         );
@@ -22,6 +28,7 @@ describe('Hero:', () => {
 
     it('Can display a subtitle', () => {
         const { getByTestId } = renderComponent({
+            ...defaultProps,
             subtitle: 'sponsored by FooBar',
         });
         const subtitle = getByTestId('fd-c-hero__subtitle');
@@ -32,6 +39,7 @@ describe('Hero:', () => {
 
     it('Can display a strapline', () => {
         const { getByTestId } = renderComponent({
+            ...defaultProps,
             strapline: 'it\'s a small world after all',
         });
         const strapline = getByTestId('fd-c-hero__strapline');

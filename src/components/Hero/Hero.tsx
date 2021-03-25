@@ -1,8 +1,14 @@
+interface HeroProps {
+    title: string;
+    subtitle: string;
+    strapline: string;
+}
+
 const Hero = ({
     title,
-    subtitle = null,
-    strapline = null,
-}) => (
+    subtitle,
+    strapline,
+}): React.ReactElement<HeroProps> => (
     <div className="fd-c-hero__wrapper">
         <div className="fd-c-hero__title">
             <div className="fd-c-hero__gooey"></div>

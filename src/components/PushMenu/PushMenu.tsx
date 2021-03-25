@@ -2,7 +2,7 @@ import React, {
     useState,
 } from 'react';
 
-const PushMenu = () => {
+const PushMenu = (): React.ReactElement => {
     const [toggle, setToggle] = useState(false);
     
     return (
@@ -21,7 +21,7 @@ const PushMenu = () => {
                 <nav
                     className={`fd-c-menu__panel ${toggle ? "fd-c-menu__panel--open" : "fd-c-menu__panel--closed"}`}
                     data-testid="fd-c-menu__panel"
-                    tabIndex={toggle ? "0" : "-1"}
+                    tabIndex={toggle ? 0 : -1}
                     aria-hidden={!toggle}
                 >
                     <div className="fd-u-mh-auto">

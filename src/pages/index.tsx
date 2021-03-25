@@ -5,7 +5,7 @@ import AboutPage from './About';
 import WorkPage from './Work';
 import ContactPage from './Contact';
 
-const App = () => (
+const App = (): React.ReactElement => (
 	<>
 		<Head>
 			<title>Fluid Designs | Claire Squire</title>
