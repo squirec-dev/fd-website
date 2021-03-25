@@ -1,5 +1,5 @@
-const WorkPage = (): React.ReactElement => (
-    <section id="workPage">        
+const Work = (): React.ReactElement => (
+    <section id="workSection">        
 		<div className="container">
             <h2>My Work</h2>
             <p>Coming soon!</p>
@@ -41,4 +41,4 @@ const WorkPage = (): React.ReactElement => (
     </section>
 );
 
-export default WorkPage;
+export default Work;

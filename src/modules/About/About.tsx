@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import {Card, CardHeader, CardBody} from '../../components/Card';
 
-const AboutPage = (): React.ReactElement => (
-    <section id="aboutPage">
+const About = (): React.ReactElement => (
+    <section id="aboutSection">
 		<div className="container">
             <h2>About</h2>
             <div className="fd-grid__row">
@@ -44,4 +44,4 @@ const AboutPage = (): React.ReactElement => (
     </section>
 );
 
-export default AboutPage;
+export default About;

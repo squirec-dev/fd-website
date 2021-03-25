@@ -1,3 +1,3 @@
-import WorkPage from './Work';
+import Work from './Work';
 
-export default WorkPage;
+export default Work;

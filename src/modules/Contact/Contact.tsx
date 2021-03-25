@@ -1,5 +1,5 @@
-const ContactPage = (): React.ReactElement => (
-    <section id="contactPage">
+const Contact = (): React.ReactElement => (
+    <section id="contactSection">
 		<div className="container">
             <h2>Get in touch!</h2>
             <p>
@@ -15,4 +15,4 @@ const ContactPage = (): React.ReactElement => (
     </section>
 );
 
-export default ContactPage;
+export default Contact;

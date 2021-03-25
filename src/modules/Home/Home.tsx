@@ -1,7 +1,7 @@
 import Hero from '../../components/Hero';
 
-const HomePage = (): React.ReactElement => (
-    <section id="homePage">
+const Home = (): React.ReactElement => (
+    <section id="homeSection">
 		<div className="container">
             <Hero
                 title="Fluid Designs"
@@ -12,4 +12,4 @@ const HomePage = (): React.ReactElement => (
     </section>
 );
 
-export default HomePage;
+export default Home;
