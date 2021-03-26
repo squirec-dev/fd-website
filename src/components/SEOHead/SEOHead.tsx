@@ -9,7 +9,7 @@ const SEOHead = (): React.ReactElement => (
         <meta name="keywords" content="HTML, CSS, JavaScript, NextJS, React, ES6, frontend, software engineer" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="http://localhost:3000/" />
+        {/* TODO: <link rel="canonical" href="http://localhost:3000/" /> */}
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Lobster&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="/styles/index.min.css" media="screen" />
         {/* Favicon */}

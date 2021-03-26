@@ -3,8 +3,10 @@ const Header = ({
 }: {
     children?: React.ReactNode,
 }): React.ReactElement => (
-    <header className='c-header'>
-        { children }
+    <header className='c-header'>    
+        <div className='u-container u-p+'>
+            { children }
+        </div>
     </header>
 );
 
