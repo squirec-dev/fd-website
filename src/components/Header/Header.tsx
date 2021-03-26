@@ -1,8 +1,10 @@
+interface HeaderProps {
+    children?: React.ReactNode,
+}
+
 const Header = ({
     children,
-}: {
-    children?: React.ReactNode,
-}): React.ReactElement => (
+}: HeaderProps): React.ReactElement => (
     <header className='c-header'>    
         <div className='u-container u-p+'>
             { children }

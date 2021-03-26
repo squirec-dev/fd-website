@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactElement } from 'react';
 import {Card, CardHeader, CardBody} from '../../components/Card';
 
-const About = (): React.ReactElement => (
+const About = (): ReactElement => (
     <section id="aboutSection">
 		<div className="container">
             <h2>About</h2>

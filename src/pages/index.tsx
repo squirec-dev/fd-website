@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from 'react';{/*, useLayoutEffect*/}
+import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { scrollTop } from '../utilities/scroll';
@@ -7,18 +6,20 @@ import { scrollTop } from '../utilities/scroll';
 import SEOHead from '../components/SEOHead';
 import Header from '../components/Header';
 import PushMenu from '../components/PushMenu';
+import Footer from '../components/Footer';
 
 import Home from '../modules/Home';
 import About from '../modules/About';
 import Work from '../modules/Work';
 import Contact from '../modules/Contact';
 
-const App = (): React.ReactElement => {
+
+const App = (): ReactElement => {
 	const router = useRouter();
 
-	const [path, setPath] = useState('');
+	const [path, setPath]: [string, Dispatch<SetStateAction<string>>] = useState('');
 
-	const scrollNavigation = () => {
+	const scrollNavigation = (): void => {
 		if (router.asPath === path) {
 			return;
 		}
@@ -31,7 +32,7 @@ const App = (): React.ReactElement => {
 		router.push(path).then(() => scrollTop(`${newSection}Section`));
 	}
 
-	useEffect(() => 
+	useEffect((): void => 
 		scrollNavigation(), [path]);
 
 	return (
@@ -39,9 +40,7 @@ const App = (): React.ReactElement => {
 			<SEOHead />
 
 			<Header>
-				<div className='u-container u-p+'>
-					<PushMenu dispatch={setPath} />
-				</div>
+				<PushMenu dispatch={setPath} />
 			</Header>
 
 			<main>
@@ -53,16 +52,7 @@ const App = (): React.ReactElement => {
 				</div>
 			</main>
 
-			<footer className='c-footer'>
-				<div className='u-container u-p+'>
-					<div className='c-footer__icon' />
-					Designed &amp; Built by Claire Squire
-					{/* TODO:
-					<br />
-					* #GithubStars | |/ #GithubShares
-					*/}
-				</div>
-			</footer>
+			<Footer />
 		</div>
 	);
 };

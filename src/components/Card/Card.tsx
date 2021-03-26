@@ -4,7 +4,7 @@ interface CardProps {
 
 const Card = ({
     children,
-}): React.ReactElement => (
+}: CardProps): React.ReactElement => (
     <div className="fd-c-card">
         {children}
     </div>
