@@ -1,8 +1,10 @@
-import PushMenu from '../../components/PushMenu';
-
-const Header = (): React.ReactElement => (
-    <header>
-        <PushMenu />
+const Header = ({
+    children,
+}: {
+    children?: React.ReactNode,
+}): React.ReactElement => (
+    <header className='c-header'>
+        { children }
     </header>
 );
 
