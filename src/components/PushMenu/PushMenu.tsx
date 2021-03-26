@@ -2,8 +2,34 @@ import React, {
     useState,
 } from 'react';
 
-const PushMenu = (): React.ReactElement => {
+const Link = ({
+    href,
+    text,
+    ...rest
+}): React.ReactElement => (
+    <a
+        href={href}
+        className="fd-c-menu__link"
+        data-testid="fd-c-menu__link"
+        {...rest}
+    >
+        {text}
+    </a>
+);
+
+const PushMenu = ({
+    dispatch,
+}:{
+    dispatch: (path: string) => void;
+}): React.ReactElement => {
     const [toggle, setToggle] = useState(false);
+
+    const handleClick = (e):void => {
+        e.preventDefault();
+        const newPage = e.target.pathname || '/';
+        setToggle(false);
+        dispatch(newPage);
+    }
     
     return (
         <div className="fd-c-menu">
@@ -15,7 +41,7 @@ const PushMenu = (): React.ReactElement => {
                     aria-label={`Menu ${toggle ? "open" : "closed"}`}
                 >
                     <div className="fd-c-menu__icon">
-                        <div className="fd-c-menu__icon-hamburger"></div>
+                        <div className="fd-c-menu__icon-hamburger" />
                     </div>
                 </button>
                 <nav
@@ -25,47 +51,19 @@ const PushMenu = (): React.ReactElement => {
                     aria-hidden={!toggle}
                 >
                     <div className="fd-u-mh-auto">
-                        <div className="fd-c-menu__logo" data-testid="fd-c-menu__logo" aria-hidden={true}></div>
+                        <div className="fd-c-menu__logo" data-testid="fd-c-menu__logo" aria-hidden={true} />
                         <ul className="fd-c-menu__link-wrapper">
                             <li>
-                                <a
-                                    href="#homePage"
-                                    onClick={() => setToggle(false)}
-                                    className="fd-c-menu__link"
-                                    data-testid="fd-c-menu__link"
-                                >
-                                    Home
-                                </a>
+                                <Link href='/' text='Home' onClick={handleClick}  />
                             </li>
                             <li>
-                                <a
-                                    href="#aboutPage"
-                                    onClick={() => setToggle(false)}
-                                    className="fd-c-menu__link"
-                                    data-testid="fd-c-menu__link"
-                                >
-                                    About
-                                </a>
+                                <Link href='/about' text='About' onClick={handleClick}  />
                             </li>
                             <li>
-                                <a
-                                    href="#workPage"
-                                    onClick={() => setToggle(false)}
-                                    className="fd-c-menu__link"
-                                    data-testid="fd-c-menu__link"
-                                >
-                                    Work
-                                </a>
+                                <Link href='/work' text='Work' onClick={handleClick}  />
                             </li>
                             <li>
-                                <a
-                                    href="#contactPage"
-                                    onClick={() => setToggle(false)}
-                                    className="fd-c-menu__link"
-                                    data-testid="fd-c-menu__link"
-                                >
-                                    Contact
-                                </a>
+                                <Link href='/contact' text='Contact' onClick={handleClick}  />
                             </li>
                         </ul>
                     </div>
