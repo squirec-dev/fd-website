@@ -1,0 +1,35 @@
+@import '../variables';
+
+.u-brand-css {
+	@include svg($mono-white, $color-primary);
+}
+.u-brand-html {
+	@include svg($mono-white, #dd4b25);
+}
+.u-brand-js {
+	@include svg($color-primary-darker, #f7df1e);
+}
+.u-brand-less {
+	@include svg(#204470, $mono-white);
+}
+.u-brand-next {
+	@include svg($color-primary-darker, $mono-white);
+}
+.u-brand-node {
+	@include svg(#689f63, $color-primary-darker);
+}
+.u-brand-postcss {
+	@include svg($mono-white, #e42827);
+}
+.u-brand-react {
+	@include svg(#5ed3f3, $color-primary-darker);
+}
+.u-brand-sass {
+	@include svg(#c76395, $mono-white);
+}
+.u-brand-ts {
+	@include svg($mono-white, $color-primary);
+}
+.u-brand-twig {
+	@include svg($color-primary-darker, $color-accent-light);
+}

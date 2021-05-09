@@ -1,0 +1,157 @@
+@import 'settings';
+
+// #Border
+@mixin border-straight($color: $color-primary) {
+	position: relative;
+
+	&::before {
+		content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+		bottom: 0;
+        display: block;
+		height: $border-height;
+		background: $color;
+    }
+}
+
+@mixin border-angled($color: $color-primary) {
+	position: relative;
+
+	&::before,
+    &::after {
+		content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+		height: $border-height;
+    }
+
+    &::before {
+	    bottom: 0;
+		background: $color;
+		background: linear-gradient(178deg, transparent 50%, $color 51%);
+	}
+
+	&::after {
+        bottom: -#{$border-height};
+        background: $color;
+        background: linear-gradient(178deg, $color 50%, transparent 51%);
+        z-index: 1;
+	}
+}
+
+// #Gooey
+@mixin gooey($gooey-size: 80px) {
+    display: block;
+    width: $gooey-size;
+    height: $gooey-size;
+    position: relative;
+    background: $color-primary;
+    
+    &::after,
+    &::before {
+        display: block;
+        width: $gooey-size;
+        height: $gooey-size;
+        position: absolute;
+        top: calc(50% - #{$gooey-size} / 2);
+        left: calc(50% - #{$gooey-size} / 2);
+    }
+
+    &::after {
+        content: '';
+        background: linear-gradient(10deg, $color-primary-light, $color-primary-lightest);
+    }
+
+    &::before {
+        content: '';
+        background: linear-gradient(80deg, $color-accent, $color-accent-light);
+    }
+}
+
+@mixin gooey-motion($gooey-size: 250px) {
+    @include gooey($gooey-size);
+    border-radius: 50% 65% 40% 45%;
+
+    &::after,
+    &::before {
+        border-radius: 50% 65% 40% 45%;
+    }
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        -webkit-animation: Gooey 8s ease-in-out infinite alternate;
+        animation: Gooey 8s ease-in-out infinite alternate;
+        will-change: border-radius, transform, opacity;
+
+        &::after,
+        &::before {
+            -webkit-animation: Gooey 8s ease-in-out infinite alternate;
+            animation: Gooey 8s ease-in-out infinite alternate;
+            will-change: border-radius, transform, opacity;
+        }
+
+        &::after {
+            animation-delay: .5s;
+        }
+
+        &::before {
+            animation-delay: 1s;
+        }
+    }
+}
+
+@mixin gooey-static($gooey-size: 80px) {
+    @include gooey($gooey-size);
+    border-radius: 100%;
+    &::before,
+    &::after {
+        border-radius: 70% 40% 60% 50%;
+        z-index: -1;
+        position: absolute;
+    }
+    &::after {
+        z-index: -2;
+        transform: rotate(125deg);
+    }
+
+    &::before {
+        z-index: -1;
+        transform: rotate(-22deg);
+    }
+}
+
+@mixin gooey-logo($gooey-size: 80px) {
+    @include gooey-static($gooey-size);
+    background-image: url('/images/logo/brackets.svg');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50% 50%;
+}
+
+// #Media Queries
+@mixin for-size($mq-breakpoint, $direction: 'from', $type: 'screen') {
+    @if map-has-key($mq-breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($mq-breakpoints, $breakpoint);
+
+        @if $direction == 'from' {
+            @media only #{$type} and (min-width: $breakpoint-value) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin svg($color, $background: 'transparent', $padding: 16px) {
+    color: $color;
+    background-color: $background;
+    text {
+        display: none;
+    }
+	svg {
+		fill: $color;
+		padding: $padding;
+	}
+}
