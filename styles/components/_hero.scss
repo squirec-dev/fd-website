@@ -1,0 +1,18 @@
+@import '../variables';
+
+.c-hero__wrapper {
+    position: relative;
+}
+
+.c-hero__subtitle,
+.c-hero__strapline {
+    font-size: 1.25em;
+}
+
+.c-hero__gooey {
+    @include gooey-motion(250px);
+    position: absolute;
+    top: calc(50% - #{250px} / 2);
+    left: calc(50% - #{250px} / 2);
+    z-index: -1;
+}

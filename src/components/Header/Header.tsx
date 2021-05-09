@@ -6,7 +6,7 @@ const Header = ({
     children,
 }: HeaderProps): React.ReactElement => (
     <header className='c-header'>    
-        <div className='u-container u-p+'>
+        <div className='u-container'>
             { children }
         </div>
     </header>

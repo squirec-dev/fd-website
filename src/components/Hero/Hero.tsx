@@ -9,19 +9,25 @@ const Hero = ({
     subtitle,
     strapline,
 }: HeroProps): React.ReactElement => (
-    <div className="fd-c-hero__wrapper">
-        <div className="fd-c-hero__title">
-            <div className="fd-c-hero__gooey" />
-            <span data-testid="fd-c-hero__subtitle">
+    <div className="u-container test">
+        <div className="c-hero__title">
+            <div className="c-hero__gooey" />
+            <span
+                className="c-hero__subtitle"
+                data-testid="c-hero__subtitle"
+            >
                 {subtitle}
             </span>
-            <h1 data-testid="fd-c-hero__title">
+            <h1
+                className="c-hero__title"
+                data-testid="c-hero__title"
+            >
                 {title}
             </h1>
         </div>
         <span 
-            className="fd-c-hero__strapline" 
-            data-testid="fd-c-hero__strapline"
+            className="c-hero__strapline" 
+            data-testid="c-hero__strapline"
         >
             {strapline}
         </span>
