@@ -10,8 +10,6 @@ const SEOHead = (): React.ReactElement => (
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* TODO: <link rel="canonical" href="http://localhost:3000/" /> */}
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Lobster&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="/styles/index.min.css" media="screen" />
         {/* Favicon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
