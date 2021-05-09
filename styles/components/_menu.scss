@@ -1,0 +1,124 @@
+$menu-bar-height: 5px;
+$menu-border-width: 2px;
+$menu-transition-duration: 0.5s;
+$menu-transition-easing: ease-out;
+
+.c-menu__icon {
+	position: relative;
+	width: 80px;
+	height: 80px;
+    background-color: $color-primary;
+	border: $menu-border-width solid transparent;
+    border-radius: 100%;
+    transition: background-color $menu-transition-duration $menu-transition-easing;
+    will-change: background-color;
+    z-index: 2000;
+
+    &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background: rgba($mono-white, 0.25);
+        border-radius: 100%;
+        opacity: 0;
+        animation: ripple .5s 1;
+        transform: scale(1);
+    }
+    
+    &:focus {
+        outline: none;
+        border: $menu-border-width solid $color-accent-light;
+    }
+}
+
+.c-menu__icon-bar {
+	content: "";
+	position: absolute;
+	left: 15px; 
+	right: 15px;
+	height: $menu-bar-height;
+	background: $color-primary-darker;
+	border-radius: 8px;
+	transform: translate3d(0,0,0);
+	transition-duration: $menu-transition-duration;
+    will-change: background-color, transform;
+}
+
+    .c-menu__icon-bar-top {
+        top: 20px;
+        transform-origin: top left;
+    }
+
+    .c-menu__icon-bar-middle {
+        top: calc(50% - #{$menu-bar-height / 2});
+        opacity: 1;
+        transition: opacity, left, right, $menu-transition-duration $menu-transition-easing;
+        will-change: opacity;
+    }
+
+    .c-menu__icon-bar-bottom {
+        bottom: 20px;
+        transform-origin: bottom left;
+    }
+
+.c-menu__icon--closed {
+    background-color: $color-primary-dark;
+    box-shadow: none;
+
+    .c-menu__icon-bar {
+        background-color: $mono-white;
+    }
+
+	.c-menu__icon-bar-top {
+        transform: translate3d(10px, 0, 0) rotate(45deg); 
+	}
+
+	.c-menu__icon-bar-middle {
+		left: 50%; 
+		right: 50%;
+		opacity: 0;
+	}
+
+	.c-menu__icon-bar-bottom {
+		transform: translate3d(10px, 0, 0) rotate(-45deg); 
+	}
+}
+
+.c-menu__panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $color-primary-dark;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+    .c-menu__panel--open {
+        right: 0;
+        will-change: visibility;
+        visibility: visible;
+    }
+
+    .c-menu__panel--closed {
+        right: -100%;
+        will-change: visibility;
+        visibility: hidden;
+    }
+
+.c-menu__logo {
+    @include gooey-logo();
+}
+
+.c-menu__link-wrapper {
+    width: 100%;
+    line-height: 40px;
+}
