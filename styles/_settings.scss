@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;800&display=swap');
+
+// #Borders
+$border-radius: 4px;
+$border-height: 60px;
+
+// #Box model
+$bm-abbrv: (
+    -top: t,
+    -right: r,
+    -bottom: b,
+    -left: l,
+    '': '',
+);
+
+// #Breakpoints
+$mq-breakpoints: (
+    phone: 481px,
+    tablet: 769px,
+    desktop-sm: 1025px,
+    desktop-lg: 1600px
+);
+
+// #Fonts
+$font-size: 16px;
+$font-header: 'Lobster', cursive;
+$font-body: -apple-system, BlinkMacSystemFont, 'Montserrat', sans-serif;
+
+// #Grid
+$grid-columns: 12;
+$grid-gutter: 3%;
+
+// #Spacings
+$space: (
+    \00002D\00002D: 2px,
+    \00002D: 4px,
+    '': 8px,
+    \00002b: 16px,
+    \00002b\00002b: 32px,
+    xl: 60px,
+);
