@@ -46,10 +46,11 @@ Commit messages should use the format `type: description`. Refer [here](https://
 ## Lighthouse
 
 Lighthouse is an important tool to review changes. Pre-commit, this should be run and documented here:
+<!-- TODO: this should be automated -->
 
 <details>
 
-![Report: 13-09-2020](/public/images/lighthouse-report--13-09-2020.PNG)
+![Report: 09-05-2021](/public/images/reports/lighthouse-report--09-05-2021.PNG)
 
 </details>
 
