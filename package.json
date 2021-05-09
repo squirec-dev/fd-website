@@ -1,28 +1,29 @@
 {
-  "name": "fluid-designs",
-  "version": "2.5.0",
-  "author": "Claire Squire",
-  "description": "Claire Squires' portfolio",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "test": "jest --watch"
-  },
-  "dependencies": {
-    "next": "^10.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^11.0.2",
-    "@testing-library/user-event": "^12.1.4",
-    "@types/jest": "^26.0.21",
-    "@types/node": "^14.14.35",
-    "@types/react": "^17.0.3",
-    "babel-jest": "^26.3.0",
-    "jest": "^26.4.2",
-    "typescript": "^4.2.3"
-  }
+	"name": "fluid-designs",
+	"version": "2.5.0",
+	"author": "Claire Squire",
+	"description": "Claire Squires' portfolio",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"test": "jest --watch"
+	},
+	"dependencies": {
+		"next": "^10.0.7",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"sass": "^1.32.8"
+	},
+	"devDependencies": {
+		"@testing-library/react": "^11.0.2",
+		"@testing-library/user-event": "^12.1.4",
+		"@types/jest": "^26.0.21",
+		"@types/node": "^14.14.35",
+		"@types/react": "^17.0.3",
+		"babel-jest": "^26.3.0",
+		"jest": "^26.4.2",
+		"typescript": "^4.2.3"
+	}
 }
