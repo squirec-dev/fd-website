@@ -1,0 +1,13 @@
+@import '../settings';
+
+@each $sym, $size in $space {
+    @each $side, $abbv in $bm-abbrv {
+        .u-m#{$abbv}#{$sym} {
+            margin#{$side}: $size;
+        }
+        
+        .u-p#{$abbv}#{$sym} {
+            padding#{$side}: $size;
+        }
+    }
+}

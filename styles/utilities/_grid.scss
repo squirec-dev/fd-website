@@ -1,0 +1,45 @@
+@import '../settings';
+
+.u-container {
+	max-width: 1024px;
+	margin: 0 auto;
+    padding: 60px 16px;
+}
+
+.u-grid__column,
+.u-grid__column-reverse,
+.u-grid__row,
+.u-grid__row-reverse {
+    display: flex;
+}
+
+.u-grid__row {
+    flex-direction: row;
+    margin-left: -#{$grid-gutter};
+}
+
+.u-grid__row-reverse {
+    flex-direction: row-reverse;
+}
+
+.u-grid__column {
+    flex-direction: column;
+}
+
+.u-grid__column-reverse {
+    flex-direction: column-reverse;
+}
+
+.u-grid__col {
+    flex: 1;
+}
+
+[class^='u-grid__col'] {
+    margin-left: $grid-gutter;
+}
+
+@for $i from 1 through $grid-columns {
+    .u-grid__col#{$i} {
+        flex-basis: calc(100% / #{$grid-columns} * #{$i});
+    }
+}
