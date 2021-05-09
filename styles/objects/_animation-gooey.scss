@@ -1,0 +1,39 @@
+@-webkit-keyframes Gooey {
+    0% {
+        border-radius: 50% 65% 40% 45%;
+    }
+    25% {
+        border-radius: 60% 40% 45% 50%;
+    }
+    50% {
+        opacity: 0.8;
+        border-radius: 65% 50% 50% 40%;
+    }
+    75% {
+        border-radius: 50% 40% 60% 50%;
+    }
+    100% {
+        border-radius: 50% 40% 40% 45%;
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes Gooey {
+    0% {
+        border-radius: 50% 65% 40% 45%;
+    }
+    25% {
+        border-radius: 60% 40% 45% 50%;
+    }
+    50% {
+        opacity: 0.8;
+        border-radius: 65% 50% 50% 40%;
+    }
+    75% {
+        border-radius: 50% 40% 60% 50%;
+    }
+    100% {
+        border-radius: 50% 40% 40% 45%;
+        transform: rotate(80deg);
+    }
+}
