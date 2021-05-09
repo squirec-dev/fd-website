@@ -1,0 +1,14 @@
+.c-footer {
+    color: $color-primary-lightest;
+    text-align: center;
+}
+
+.c-footer__icon-wrapper {
+    position: relative;
+    z-index: 0;
+}
+
+.c-footer__icon-gooey {
+    @include gooey-logo(60px);
+    margin: 0 auto 16px;
+}
