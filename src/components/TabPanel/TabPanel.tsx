@@ -39,14 +39,14 @@ const TabPanel = ({
     const ActivePanel = (): ReactElement => {
         const Component = content[active];
         return (
-            <div className={ tabPanelCSS['c-tab-panel__panel'] }>
+            <div className="c-tab-panel__panel">
                 <Component />
             </div>
         );
     }
 
     return (
-		<div className={ tabPanelCSS['c-tab-panel'] }>
+		<div className="c-tab-panel">
             <Tabs />
             <ActivePanel />
         </div>

@@ -1,0 +1,40 @@
+.c-tab-panel {
+    display: inline-flex;
+    width: 100%;
+    color: $mono-white;
+    background: $color-primary-dark;
+}
+.c-tab-panel__nav {
+    margin-right: 16px;
+    border-right: 4px solid $color-primary-darker;
+}
+.c-tab-panel__tab {
+    @extend a;
+    padding: 8px 16px;
+}
+.c-tab-panel__tab--active {
+    background: $color-primary-darker;
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: $color-accent-light;
+        display: block;
+        position: absolute;
+        left: calc(100% - 12px);
+        top: calc(50% - 12px);
+        border-radius: 100%;
+    }
+
+	&::after {
+        display: none;
+	}
+}
+.c-tab-panel__button {
+    width: 100%;
+    text-align: right;
+}
+.c-tab-panel__panel {
+    width: 100%;
+    padding: 16px;
+}
