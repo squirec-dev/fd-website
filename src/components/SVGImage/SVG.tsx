@@ -1,5 +1,5 @@
 interface SvgProps {
-    name: string
+    id: string
     paths: string[],
     text: string,
     transform: string,
@@ -7,20 +7,20 @@ interface SvgProps {
 }
 
 const SVG = ({
-    name,
+    id,
     paths,
     text,
     transform,
     viewbox,
 }: SvgProps): React.ReactElement => (
     <svg
-        aria-labelledby={`svgText${name}`}
+        aria-labelledby={id}
         preserveAspectRatio="xMidYMid meet"  
         role="img"
         viewBox={viewbox} 
         xmlns="http://www.w3.org/2000/svg" 
     >
-        <text id={`svgText${name}`}>{text}</text>
+        <text id={`svgText${id}`}>{text}</text>
         <g
             transform={transform}
             stroke="none"

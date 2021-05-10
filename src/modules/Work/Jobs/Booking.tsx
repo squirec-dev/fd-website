@@ -22,16 +22,16 @@ const Booking = (): React.ReactElement => (
         
         <div className='c-masonry__container'>
             <div className='u-p+ c-masonry__block u-brand-react'>
-                <SVG {...Reactjs} />
+                <SVG {...Reactjs} id="WorkPageBReact" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-sass'>
-                <SVG {...Sass} />
+                <SVG {...Sass} id="WorkPageBSass" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-postcss'>
-                <SVG {...Postcss} />
+                <SVG {...Postcss} id="WorkPageBPCss" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-node'>
-                <SVG {...Node} />
+                <SVG {...Node} id="WorkPageBNode" />
             </div>
         </div>
     </>

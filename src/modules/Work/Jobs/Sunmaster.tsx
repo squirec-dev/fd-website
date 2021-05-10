@@ -20,19 +20,19 @@ const Sunmaster = (): React.ReactElement => (
         
         <div className='c-masonry__container'>
             <div className='u-p+ c-masonry__block u-brand-html'>
-                <SVG {...Html} />
+                <SVG {...Html} id="WorkPageSHtml" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-css'>
-                <SVG {...Css} />
+                <SVG {...Css} id="WorkPageSCss" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-twig'>
-                <SVG {...Twig} />
+                <SVG {...Twig} id="WorkPageSTwig" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-react'>
-                <SVG {...Reactjs} />
+                <SVG {...Reactjs} id="WorkPageSReact" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-less'>
-                <SVG {...Less} />
+                <SVG {...Less} id="WorkPageSLess" />
             </div>
         </div>
     </>

@@ -19,16 +19,16 @@ const Covea = (): React.ReactElement => (
         <p>As well as my day to day coding, I ran a Hackathon, upskill working group and mentored juniors, tailoring my approaches to suit and help the individual.</p>
         <div className='c-masonry__container'>
             <div className='u-p+ c-masonry__block u-brand-ts'>
-                <SVG {...Typescript} />
+                <SVG {...Typescript} id="WorkPageCTs" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-sass'>
-                <SVG {...Sass} />
+                <SVG {...Sass} id="WorkPageCSass" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-next'>
-                <SVG {...Nextjs} />
+                <SVG {...Nextjs} id="WorkPageCNext" />
             </div>
             <div className='u-p+ c-masonry__block u-brand-node'>
-                <SVG {...Node} />
+                <SVG {...Node} id="WorkPageCNode" />
             </div>
         </div>
     </>
