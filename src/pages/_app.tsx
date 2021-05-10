@@ -1,15 +1,15 @@
 import '../../styles/_core.scss';
 
-interface MyAppTypes {
+interface AppProps {
     Component: React.FunctionComponent,
     pageProps?: Record<string, string>
 }
 
-const MyApp = ({
+const App = ({
     Component,
     pageProps
-}:MyAppTypes): React.ReactElement => (
+}:AppProps): React.ReactElement => (
     <Component {...pageProps} />
 );
 
-export default MyApp;
+export default App;
