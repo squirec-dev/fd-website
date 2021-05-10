@@ -9,9 +9,16 @@ import {
 const Booking = (): React.ReactElement => (
     <>
         <h3>Transport@Booking.com</h3>
-        <p>I built mobile-first AA-accessible layouts using the MVC pattern with Express routing, ReactJS and NodeJS. I am passionate about developing design systems, after noticing a problem with duplicated and complex code I suggested we build a component library and I was a core contributor in developing it using TDD, ITCSS and BEM. I noticed several knowledge gaps and undocumented areas, after exploration I added suitable information/ diagrams and ran knowledge sessions. I learnt PostCSS and created a proof of concept to replace SASS. I was heavily involved in the redesign of the core booking journey including; Google Optimise experiments, the implementation of feature toggles, implementing the Booking.com payment API and moving from a monolithic to a micro-frontend architecture. I learnt Git and was able to run scripts effectively using the terminal.</p>
-        <p>I had experience using AWS i.e.; SDK, CloudWatch and S3, regularly deploying to an EC2 instance using Bamboo. As a warden, I monitored dashboards with Sensu alerts and reacted to issues on a priority basis. I created new alerts and guided colleagues on our set up of Sensu. I updated our static content process and actioned changes to ensure versioning with automated deployments to S3.</p>
-        <p>I voluntarily took on roles as an Ethics Ambassador, Fire Warden and First Aider. I joined the Diversity &amp; Inclusion Guild, aimed at improving the business' operations and culture, working with Tech Returners to help people get back into tech-based roles. I ran a Hackathon by myself, organising a 3-day opportunity for hundreds of people to develop something of interest to them, to be judged and awarded. In my last three months at Booking I mentored a new associate developer, pairing with her frequently.</p>
+        <span>
+            Manchester
+            <span className="u-divider" aria-hidden="true" />
+            2017 - 2020
+        </span>
+        <p>I worked on the customer experience team, building an accessible journey with mobile-first layouts. I worked with MVC patterns, Express, ReactJS and NodeJS. I was a core contributor in developing a design system using TDD, ITCSS and BEM. I also worked with PostCSS to create a proof of concept for replacing SASS.</p>
+        <p>I've created Google Optimise experiments, the implementation of feature toggles, implementing API's and creating documentation.</p>
+        <p>I was involved in the set up and move from a monolithic to a micro-frontend architecture.</p>
+        <p>I had experience using AWS, including SDK, CloudWatch and S3, and regularly deployed work to an EC2 instance using Bamboo. As a warden I created and monitored Sensu alerts, reacting to issues on a priority basis.</p>
+        <p>I voluntarily took on roles as an Ethics Ambassador, Fire Warden and First Aider. I joined the Diversity &amp; Inclusion Guild, aimed at improving the business' operations and culture, working with Tech Returners and mentoring the successful applicant. I also ran my first Hackathon with lots of positive feedback, organising a 3-day opportunity for hundreds of people to develop something of interest to them, to be judged and awarded.</p>
         
         <div className='c-masonry__container'>
             <div className='u-p+ c-masonry__block u-brand-react'>

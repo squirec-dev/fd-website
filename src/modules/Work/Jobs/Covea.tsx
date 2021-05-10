@@ -9,7 +9,14 @@ import {
 const Covea = (): React.ReactElement => (
     <>
         <h3>Covea</h3>
-        <p>Working remotely I got myself set up quickly, built good working relationships and developed frontend user journeys with Typescript, ReactJS and NextJS. I also used ContentStack and Camunda as part of writing integration layers. During my time here I have built several proof of concepts including custom routing and feature toggles. I have made contributions to improve engineering quality and consistency including talks &amp; refinement of their implementation of BEM/ ITCSS, sharing articles and acting as a sounding board to the principal engineer. I identified accessibility issues, provided solutions and discussed the issues/ tools we can use. I have taken ownership of planning a remote Hackathon as well as running the upskill working group and mentoring juniors, tailoring my approaches to suit and help the individual.</p>
+        <span>
+            Remote
+            <span className="u-divider" aria-hidden="true" />
+            2020 - Present
+        </span>
+        <p>Building accessible user jouneys using Nextjs and Typescript, utilising React context and hooks. I've worked on integration layers using Camunda and Swagger. During my time here I've built several proof of concepts including custom routing with transitions and feature toggles.</p>
+        <p>I've contributed to engineering quality and consistency including talks &amp; refinement of their implementation of BEM/ ITCSS. I've run training sessions on accessibility, discussing the issues and tools we can use.</p>
+        <p>As well as my day to day coding, I ran a Hackathon, upskill working group and mentored juniors, tailoring my approaches to suit and help the individual.</p>
         <div className='c-masonry__container'>
             <div className='u-p+ c-masonry__block u-brand-ts'>
                 <SVG {...Typescript} />
