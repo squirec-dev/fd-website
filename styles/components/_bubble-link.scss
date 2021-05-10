@@ -1,0 +1,41 @@
+.c-bubble-link {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    aspect-ratio: 1;
+    color: $color-primary-darker;
+    background:  $color-primary;
+    border-radius: 100%;
+	padding: 16px;
+
+    &::after {
+        display: none;
+    }
+}
+
+.c-bubble-link__icon {
+	width: 80%;
+	height: 80%;
+    padding: 8px;
+}
+
+.c-bubble-link__text {
+    display: none
+}
+
+.c-bubble-link:hover {
+    fill: $color-primary-darker;
+
+	.c-bubble-link__icon {
+		justify-self: flex-start;
+        width: 50%;
+        height: 50%;
+        margin-bottom: 8px;
+	}
+    
+	.c-bubble-link__text {
+		display: block;
+	}
+}
