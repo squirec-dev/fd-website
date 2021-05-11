@@ -1,10 +1,12 @@
-import SVG from '../../../components/SVGImage';
+import SVG from "../../../components/SVGImage";
 import {
+    Javascript,
     Node,
     Postcss,
     Reactjs,
     Sass,
-} from '../../../objects/brands';
+    Typescript,
+} from "../../../objects/brands";
 
 const Booking = (): React.ReactElement => (
     <>
@@ -19,19 +21,24 @@ const Booking = (): React.ReactElement => (
         <p>I was involved in the set up and move from a monolithic to a micro-frontend architecture.</p>
         <p>I had experience using AWS, including SDK, CloudWatch and S3, and regularly deployed work to an EC2 instance using Bamboo. As a warden I created and monitored Sensu alerts, reacting to issues on a priority basis.</p>
         <p>I voluntarily took on roles as an Ethics Ambassador, Fire Warden and First Aider. I joined the Diversity &amp; Inclusion Guild, aimed at improving the business' operations and culture, working with Tech Returners and mentoring the successful applicant. I also ran my first Hackathon with lots of positive feedback, organising a 3-day opportunity for hundreds of people to develop something of interest to them, to be judged and awarded.</p>
-        
-        <div className='c-masonry__container'>
-            <div className='u-p+ c-masonry__block u-brand-react'>
-                <SVG {...Reactjs} id="WorkPageBReact" />
+        <div className="c-masonry__wrapper">
+            <div className="c-masonry__block c-masonry__span-x u-brand-react">
+                <SVG id="WorkBkReact" {...Reactjs} />
             </div>
-            <div className='u-p+ c-masonry__block u-brand-sass'>
-                <SVG {...Sass} id="WorkPageBSass" />
+            <div className="c-masonry__block c-masonry__align-end u-brand-js">
+                <SVG id="WorkBkJs" {...Javascript} />
             </div>
-            <div className='u-p+ c-masonry__block u-brand-postcss'>
-                <SVG {...Postcss} id="WorkPageBPCss" />
+            <div className="c-masonry__block u-brand-node">
+                <SVG id="WorkBkNode" {...Node} />
             </div>
-            <div className='u-p+ c-masonry__block u-brand-node'>
-                <SVG {...Node} id="WorkPageBNode" />
+            <div className="c-masonry__block u-brand-sass">
+                <SVG id="WorkBkSass" {...Sass} />
+            </div>
+            <div className="c-masonry__block c-masonry__align-end u-brand-ts">
+                <SVG id="WorkBkTs" {...Typescript} />
+            </div>
+            <div className="c-masonry__block c-masonry__span-x u-brand-postcss">
+                <SVG id="WorkBkPostcss" {...Postcss} />
             </div>
         </div>
     </>

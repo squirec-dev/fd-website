@@ -21,23 +21,23 @@ const About = (): React.ReactElement => (
             <p>I like building reusable design systems, learning and sharing new things</p>
             <p>When I'm not coding I like to get creative using a range of art mediums and get outdoors, either off on mini adventures or trying to grow things in my garden</p>
         
-            <div className='u-mt+ u-mb+ c-masonry__container'>
-                <div className='c-masonry__block u-brand-js'>
-                    <SVG id="AboutPageJs" {...Javascript} />
+            <div className='u-pt+ u-pb+ c-masonry__wrapper'>
+                <div className='c-masonry__block c-masonry__span-x u-brand-react'>
+                    <SVG id="AboutPagereact" {...Reactjs} />
                 </div>
-                <div className='c-masonry__block u-brand-ts'>
-                    <SVG id="AboutPageTs" {...Typescript} />
+                <div className='c-masonry__block c-masonry__align-end u-brand-js'>
+                    <SVG id="AboutPageJs" {...Javascript} />
                 </div>
                 <div className='c-masonry__block u-brand-css'>
                     <SVG id="AboutPageCss" {...Css} />
                 </div>
-                <div className='c-masonry__block u-brand-react'>
-                    <SVG id="AboutPagereact" {...Reactjs} />
-                </div>
                 <div className='c-masonry__block u-brand-html'>
                     <SVG id="AboutPageHtml" {...Html} />
                 </div>
-                <div className='c-masonry__block u-brand-node'>
+                <div className='c-masonry__block c-masonry__align-end u-brand-ts'>
+                    <SVG id="AboutPageTs" {...Typescript} />
+                </div>
+                <div className='c-masonry__block c-masonry__span-x u-brand-node'>
                     <SVG id="AboutPageNode" {...Node} />
                 </div>
             </div>
