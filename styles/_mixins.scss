@@ -132,12 +132,12 @@
 }
 
 // #Media Queries
-@mixin for-size($mq-breakpoint, $direction: 'from', $type: 'screen') {
+@mixin for-size($breakpoint, $direction: 'from', $type: 'screen') {
     @if map-has-key($mq-breakpoints, $breakpoint) {
-        $breakpoint-value: map-get($mq-breakpoints, $breakpoint);
+        $size: map-get($mq-breakpoints, $breakpoint);
 
         @if $direction == 'from' {
-            @media only #{$type} and (min-width: $breakpoint-value) {
+            @media only #{$type} and (min-width: $size) {
                 @content;
             }
         }
