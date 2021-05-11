@@ -1,9 +1,10 @@
-import SVG from '../../components/SVGImage';
 import {
     Hashnode,
     Linkedin,
     Twitter
- } from '../../objects/brands';
+} from '../../objects/brands';
+
+import BubbleLink from '../../components/BubbleLink';
 
 const Contact = (): React.ReactElement => (
     <section id="contactSection" className="u-background-light u-border-angled-dark">
@@ -12,39 +13,36 @@ const Contact = (): React.ReactElement => (
             <p>Thanks for taking a look!</p>
             <p>Please feel free to get in touch</p>
             
-            <div className="u-pbxl u-grid__row">
-                <div className="u-grid__col4">
-                    <a
-                        className="u-elevation--mid c-bubble-link"
+            <div className="u-pbxl u-grid__row u-grid__row-wrap">
+                <div className="u-grid__col u-p+">
+                    <BubbleLink
                         href="https://www.linkedin.com/in/claire-squire-48b043a2/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <SVG id="ContactLI" svgAttr={{className:"c-bubble-link__icon"}} {...Linkedin} />
-                        <span className="c-bubble-link__text">LinkedIn</span>
-                    </a>
+                        iconAttr={{
+                            id: "ContactLI",
+                            ...Linkedin
+                        }}
+                        text="LinkedIn"
+                    />
                 </div>
-                <div className="u-grid__col4">
-                    <a
-                        className="u-elevation--mid c-bubble-link"
+                <div className="u-grid__col u-p+">
+                    <BubbleLink
                         href="https://twitter.com/SquireC_dev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <SVG id="ContactTW" svgAttr={{className:"c-bubble-link__icon"}} {...Twitter} />
-                        <span className="c-bubble-link__text">Twitter</span>
-                    </a>
+                        iconAttr={{
+                            id: "ContactTW",
+                            ...Twitter
+                        }}
+                        text="Twitter"
+                    />
                 </div>
-                <div className="u-grid__col4">
-                    <a
-                        className="u-elevation--mid c-bubble-link"
+                <div className="u-grid__col u-p+">
+                    <BubbleLink
                         href="https://squirec-dev.hashnode.dev/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <SVG id="ContactHN" svgAttr={{className:"c-bubble-link__icon"}} {...Hashnode} />
-                        <span className="c-bubble-link__text">Hashnode</span>
-                    </a>
+                        iconAttr={{
+                            id: "ContactHN",
+                            ...Hashnode
+                        }}
+                        text="Hashnode"
+                    />
                 </div>
             </div>
         </div>
