@@ -7,6 +7,12 @@
     font-size: 1.25em;
 }
 
+.c-hero__strapline {
+	position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
 .c-hero__gooey {
     @include gooey-motion(250px);
     position: absolute;
