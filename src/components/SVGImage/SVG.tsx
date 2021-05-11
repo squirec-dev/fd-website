@@ -2,33 +2,28 @@ interface SvgProps {
     id: string
     paths: string[],
     text: string,
-    transform: string,
     viewbox: string,
+    svgAttr?: Record<string, any>,
 }
 
 const SVG = ({
     id,
     paths,
     text,
-    transform,
     viewbox,
+    svgAttr = {},
 }: SvgProps): React.ReactElement => (
     <svg
         aria-labelledby={id}
-        preserveAspectRatio="xMidYMid meet"  
         role="img"
         viewBox={viewbox} 
         xmlns="http://www.w3.org/2000/svg" 
+        {...svgAttr}
     >
         <text id={`svgText${id}`}>{text}</text>
-        <g
-            transform={transform}
-            stroke="none"
-        >
-            {paths.map((path, idx) => (
-                <path key={idx} d={path} />
-            ))}
-        </g>
+        {paths.map((path, idx) => (
+            <path key={idx} d={path} />
+        ))}
     </svg>
 );
 
