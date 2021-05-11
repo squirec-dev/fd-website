@@ -1,4 +1,3 @@
-import SVG from '../../../components/SVGImage';
 import {
     Codepen,
     Github,
@@ -6,51 +5,51 @@ import {
     Jsfiddle,
 } from '../../../objects/brands';
 
+import BubbleLink from '../../../components/BubbleLink';
+
 const Other = (): React.ReactElement => (
     <>
         <h3>Other work</h3>
-        <div className="u-grid__row u-pbxl">
-            <div className="u-grid__col6">
-                <a
-                    className="u-elevation--mid todo-bubble"
+        <div className="u-pbxl u-grid__row u-grid__row-wrap">
+            <div className="u-grid__col u-p+">
+                <BubbleLink
                     href="https://squirec-dev.hashnode.dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <SVG {...Hashnode} />
-                </a>
+                    iconAttr={{
+                        id: "WorkHN",
+                        ...Hashnode
+                    }}
+                    text="Hashnode"
+                />
             </div>
-            <div className="u-grid__col6">
-                <a
-                    className="u-elevation--mid todo-bubble"
+            <div className="u-grid__col u-p+">
+                <BubbleLink
                     href="https://github.com/squirec-dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <SVG {...Github} />
-                </a>
+                    iconAttr={{
+                        id: "WorkGH",
+                        ...Github
+                    }}
+                    text="Github"
+                />
             </div>
-        </div>
-        <div className="u-grid__row u-pbxl">
-            <div className="u-grid__col6">
-                <a
-                    className="u-elevation--mid todo-bubble"
+            <div className="u-grid__col u-p+">
+                <BubbleLink
                     href="https://codepen.io/SquireC_dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <SVG {...Codepen} />
-                </a>
+                    iconAttr={{
+                        id: "WorkCP",
+                        ...Codepen
+                    }}
+                    text="Codepen"
+                />
             </div>
-            <div className="u-grid__col6">
-                <a
-                    className="u-elevation--mid todo-bubble"
+            <div className="u-grid__col u-p+">
+                <BubbleLink
                     href="https://jsfiddle.net/user/SquireC_dev/fiddles/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <SVG {...Jsfiddle} />
-                </a>
+                    iconAttr={{
+                        id: "WorkJF",
+                        ...Jsfiddle
+                    }}
+                    text="Jsfiddle"
+                />
             </div>
         </div>
     </>
