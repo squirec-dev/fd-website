@@ -100,3 +100,11 @@ a {
 		transform: unset;
 	}
 }
+
+svg {
+	max-width: 100%;
+
+	text {
+		display: none;
+	}
+}
