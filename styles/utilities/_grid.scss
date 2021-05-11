@@ -12,17 +12,53 @@
     margin-left: -#{$grid-gutter};
 }
 
+.u-grid__row-wrap {
+    flex-wrap: wrap;
+}
+
+[class^="u-grid__col"] {
+    margin-left: $grid-gutter;
+}
 
 .u-grid__col {
     flex: 1;
 }
 
-[class^='u-grid__col'] {
-    margin-left: $grid-gutter;
-}
 
 @for $i from 1 through $grid-columns {
     .u-grid__col#{$i} {
         flex-basis: calc(100% / #{$grid-columns} * #{$i});
     }
 }
+
+@include for-size('tablet') {
+    .u-grid__row\@tablet {
+        display: flex;
+        flex-direction: row;
+        margin-left: -#{$grid-gutter};
+    }
+    
+
+    @for $i from 1 through $grid-columns {
+        .u-grid__col#{$i}\@tablet {
+            flex-basis: calc(100% / #{$grid-columns} * #{$i});
+        }
+    }
+}
+// .u-grid__column,
+// .u-grid__column-reverse,
+// .u-grid__row-reverse {
+//     display: flex;
+// }
+
+// .u-grid__row-reverse {
+//     flex-direction: row-reverse;
+// }
+
+// .u-grid__column {
+//     flex-direction: column;
+// }
+
+// .u-grid__column-reverse {
+//     flex-direction: column-reverse;
+// }
