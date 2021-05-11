@@ -1,4 +1,4 @@
-import SVG from '../../components/SVGImage';
+import SVG from "../../components/SVGImage";
 
 interface BubbleLinkProps {
     external?: boolean,

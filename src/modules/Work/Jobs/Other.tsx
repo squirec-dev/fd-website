@@ -3,9 +3,9 @@ import {
     Github,
     Hashnode,
     Jsfiddle,
-} from '../../../objects/brands';
+} from "../../../objects/brands";
 
-import BubbleLink from '../../../components/BubbleLink';
+import BubbleLink from "../../../components/BubbleLink";
 
 const Other = (): React.ReactElement => (
     <>

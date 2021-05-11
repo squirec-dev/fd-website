@@ -5,7 +5,7 @@ interface HeaderProps {
 const Header = ({
     children,
 }: HeaderProps): React.ReactElement => (
-    <header className='c-header'> 
+    <header className="c-header"> 
         { children }
     </header>
 );

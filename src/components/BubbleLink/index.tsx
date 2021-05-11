@@ -1,3 +1,3 @@
-import BubbleLink from './BubbleLink';
+import BubbleLink from "./BubbleLink";
 
 export default BubbleLink;

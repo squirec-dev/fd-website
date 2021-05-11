@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import Hero from "../../components/Hero";
 
 const Home = (): React.ReactElement => (
     <section id="homeSection" className="u-border-straight-primary">
