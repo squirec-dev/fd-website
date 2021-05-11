@@ -1,10 +1,20 @@
 .c-hero__wrapper {
+    min-height: 100vh;
+    padding: 60px 16px;
     position: relative;
+}
+
+.c-hero__title {
+    text-align: center;
 }
 
 .c-hero__subtitle,
 .c-hero__strapline {
-    font-size: 1.25em;
+    font-size: 16px;
+
+    @include for-size('tablet') {
+        font-size: 1.25em;
+    }
 }
 
 .c-hero__strapline {

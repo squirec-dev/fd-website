@@ -9,8 +9,8 @@ const Hero = ({
     subtitle,
     strapline,
 }: HeroProps): React.ReactElement => (
-    <div className="u-container test">
-        <div className="c-hero__title">
+    <div className="u-container u-centered c-hero__wrapper">
+        <div>
             <div className="c-hero__gooey" />
             <span
                 className="c-hero__subtitle"
