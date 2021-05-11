@@ -1,17 +1,22 @@
 import SVG from '../../components/SVGImage';
 
 interface BubbleLinkProps {
-    external: boolean,
+    external?: boolean,
     href: string,
-    iconId: string,
-    iconName: string,
+    iconAttr: {
+        id: string
+        paths: string[],
+        text: string,
+        viewbox: string,
+    },
+    text: string,
 }
 
 const BubbleLink = ({
     external = true,
     href,
-    iconId,
-    iconName,
+    iconAttr,
+    text,
 }: BubbleLinkProps): React.ReactElement => {
     let externalAttr = {};
     
@@ -28,11 +33,9 @@ const BubbleLink = ({
             href={href}
             {...externalAttr}
         >
-            <div className="c-bubble-link__icon">
-                <SVG id={iconId} {...iconName} />
-            </div>
+            <SVG {...iconAttr} svgAttr={{className:"c-bubble-link__icon"}} />
             <div className="c-bubble-link__text">
-                {iconName}
+                {text}
             </div>
         </a>
     );
