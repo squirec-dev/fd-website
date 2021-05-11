@@ -1,0 +1,49 @@
+.c-usp__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+}
+
+.c-usp__block {
+    @extend .u-grid__row;
+}
+
+.c-usp__title {
+    @include gooey-static(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(85px, 80%, 150px);
+    font-family: "Lobster", cursive;
+    font-size: 5vmax;
+}
+
+.c-usp__description {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@include for-size('phone') {
+    .c-usp__wrapper {
+        flex-direction: row;
+        margin-left: -#{$grid-gutter};
+    }
+
+    .c-usp__block {
+        flex-direction: column;
+        margin-left: $grid-gutter;
+        flex-basis: calc(100% / #{$grid-columns} * 4);
+    }
+
+    .c-usp__title,
+    .c-usp__description {
+        flex-basis: unset;
+        margin: 0 auto;
+    }
+    
+    .c-usp__title {
+        margin-bottom: 16px;
+    }
+}
