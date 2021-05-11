@@ -1,6 +1,8 @@
 .c-hero__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding: 60px 16px;
     position: relative;
 }
 

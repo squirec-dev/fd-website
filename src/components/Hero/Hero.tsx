@@ -9,7 +9,7 @@ const Hero = ({
     subtitle,
     strapline,
 }: HeroProps): React.ReactElement => (
-    <div className="u-container u-centered c-hero__wrapper">
+    <div className="u-container c-hero__wrapper">
         <div>
             <div className="c-hero__gooey" />
             <span
