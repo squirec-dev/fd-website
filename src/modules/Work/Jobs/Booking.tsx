@@ -11,7 +11,7 @@ const Booking = (): React.ReactElement => (
         <h3>Transport@Booking.com</h3>
         <span>
             Manchester
-            <span className="u-divider" aria-hidden="true" />
+            <span className="u-divider--vertical" aria-hidden="true" />
             2017 - 2020
         </span>
         <p>I worked on the customer experience team, building an accessible journey with mobile-first layouts. I worked with MVC patterns, Express, ReactJS and NodeJS. I was a core contributor in developing a design system using TDD, ITCSS and BEM. I also worked with PostCSS to create a proof of concept for replacing SASS.</p>
