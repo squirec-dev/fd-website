@@ -1,0 +1,40 @@
+.u-color-light {
+    color: $mono-white;
+}
+
+// #Background
+.u-background-light {
+    background-color: $color-primary-lightest;
+}
+
+.u-background-dark {
+    background-color: $color-primary-dark;
+}
+
+// #Borders
+.u-border-straight-primary {
+    @include border-straight($color-primary);
+}
+.u-border-angled-primary {
+    @include border-angled($color-primary);
+}
+
+.u-border-angled-dark {
+    @include border-angled($color-primary-darker);
+}
+
+// #Elevation
+.u-elevation--top {
+    box-shadow: 0 4px 8px rgba($mono-black, 0.15), 0 4px 8px rgba($mono-black, 0.15);
+}
+
+.u-elevation--mid {
+    box-shadow: 0 2px 4px rgba($mono-black, 0.15), 0 2px 4px rgba($mono-black, 0.15);
+}
+
+// #Divider
+.u-divider--vertical {
+    border-left: 2px solid $color-accent-light;
+    height: 100%;
+    margin: 0 8px;
+}
