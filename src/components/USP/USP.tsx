@@ -9,7 +9,7 @@ const USP = (): React.ReactElement => {
     }
 
     return (
-        <div className="c-usp__wrapper">
+        <div className="u-mb+ c-usp__wrapper">
             <div className="u-pb+ c-usp__block">
                 <span className="u-grid__col4 c-usp__title">XP</span>
                 <span className="u-grid__col8 c-usp__description">Over {getYears()} years commercial experience</span>

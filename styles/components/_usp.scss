@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: clamp(85px, 80%, 150px);
+    width: clamp(85px, 80%, 134px);
     font-family: "Lobster", cursive;
     font-size: 5vmax;
 }
@@ -25,7 +25,7 @@
     text-align: center;
 }
 
-@include for-size('phone') {
+@include for-size("phone") {
     .c-usp__wrapper {
         flex-direction: row;
         margin-left: -#{$grid-gutter};
