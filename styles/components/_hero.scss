@@ -14,7 +14,7 @@
 .c-hero__strapline {
     font-size: 16px;
 
-    @include for-size('tablet') {
+    @include for-size("tablet") {
         font-size: 1.25em;
     }
 }
