@@ -1,4 +1,10 @@
-import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from 'react';
+import {
+	Dispatch,
+	ReactElement,
+	SetStateAction,
+	useEffect,
+	useState,
+} from 'react';
 import { useRouter } from 'next/router';
 
 import { scrollTop } from '../utilities/scroll';
@@ -13,8 +19,7 @@ import About from '../modules/About';
 import Work from '../modules/Work';
 import Contact from '../modules/Contact';
 
-
-const App = (): ReactElement => {
+const Index = (): ReactElement => {
 	const router = useRouter();
 
 	const [path, setPath]: [string, Dispatch<SetStateAction<string>>] = useState('');
@@ -25,6 +30,7 @@ const App = (): ReactElement => {
 		}
 		
 		let newSection = path.replace('/', '');
+		
 		if (newSection.length <= 1) {
 			newSection = 'home';
 		}
@@ -36,7 +42,7 @@ const App = (): ReactElement => {
 		scrollNavigation(), [path]);
 
 	return (
-		<div className='u-wrapper'>
+		<>
 			<SEOHead />
 
 			<Header>
@@ -44,17 +50,15 @@ const App = (): ReactElement => {
 			</Header>
 
 			<main>
-				<div className='u-container'>
-					<Home />
-					<About />
-					<Work />
-					<Contact />
-				</div>
+				<Home />
+				<About />
+				<Work />
+				<Contact />
 			</main>
 
 			<Footer />
-		</div>
+		</>
 	);
 };
 
-export default App;
+export default Index;
