@@ -13,37 +13,31 @@ const Contact = (): React.ReactElement => (
             <p>Thanks for taking a look!</p>
             <p>Please feel free to get in touch</p>
 
-            <div className="u-pbxl u-grid__row u-grid__row-wrap">
-                <div className="u-grid__col u-p+">
-                    <BubbleLink
-                        href="https://www.linkedin.com/in/claire-squire-48b043a2/"
-                        iconAttr={{
-                            id: "ContactLI",
-                            ...Linkedin
-                        }}
-                        text="LinkedIn"
-                    />
-                </div>
-                <div className="u-grid__col u-p+">
-                    <BubbleLink
-                        href="https://twitter.com/SquireC_dev"
-                        iconAttr={{
-                            id: "ContactTW",
-                            ...Twitter
-                        }}
-                        text="Twitter"
-                    />
-                </div>
-                <div className="u-grid__col u-p+">
-                    <BubbleLink
-                        href="https://squirec-dev.hashnode.dev/"
-                        iconAttr={{
-                            id: "ContactHN",
-                            ...Hashnode
-                        }}
-                        text="Hashnode"
-                    />
-                </div>
+            <div className="c-bubble-link__wrapper">
+                <BubbleLink
+                    href="https://www.linkedin.com/in/claire-squire-48b043a2/"
+                    iconAttr={{
+                        id: "ContactLI",
+                        ...Linkedin
+                    }}
+                    text="LinkedIn"
+                />
+                <BubbleLink
+                    href="https://twitter.com/SquireC_dev"
+                    iconAttr={{
+                        id: "ContactTW",
+                        ...Twitter
+                    }}
+                    text="Twitter"
+                />
+                <BubbleLink
+                    href="https://squirec-dev.hashnode.dev/"
+                    iconAttr={{
+                        id: "ContactHN",
+                        ...Hashnode
+                    }}
+                    text="Hashnode"
+                />
             </div>
         </div>
     </section>
