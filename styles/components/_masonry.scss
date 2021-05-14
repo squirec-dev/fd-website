@@ -1,11 +1,14 @@
 .c-masonry__wrapper {
     display: flex;
     flex-flow: row wrap;
+    border-radius: 16px;
+    overflow: hidden;
 
     svg {
         max-width: 150px;
     }
 }
+
 .c-masonry__block {
     display: flex;
     align-content: center;
@@ -13,10 +16,12 @@
     flex-basis: 25%;
     height: 125px;
 }
+
 .c-masonry__align-end {
     align-items: flex-end;
     justify-content: flex-end;
 }
+
 .c-masonry__span-x {
     flex-basis: 50%;
 }
