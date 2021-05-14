@@ -1,4 +1,4 @@
-@import 'settings';
+@import "settings";
 
 // #Border
 @mixin border-straight($color: $color-primary) {
@@ -45,15 +45,14 @@
 
 // #Gooey
 @mixin gooey($gooey-size: 80px) {
-    display: block;
-    width: $gooey-size;
-    height: $gooey-size;
     position: relative;
+    width: $gooey-size;
     background: $color-primary;
+    aspect-ratio: 1 / 1;
     
     &::after,
     &::before {
-        display: block;
+        content: "";
         width: $gooey-size;
         height: $gooey-size;
         position: absolute;
@@ -62,12 +61,10 @@
     }
 
     &::after {
-        content: '';
         background: linear-gradient(10deg, $color-primary-light, $color-primary-lightest);
     }
 
     &::before {
-        content: '';
         background: linear-gradient(80deg, $color-accent, $color-accent-light);
     }
 }
@@ -82,13 +79,11 @@
     }
 
     @media screen and (prefers-reduced-motion: no-preference) {
-        -webkit-animation: Gooey 8s ease-in-out infinite alternate;
         animation: Gooey 8s ease-in-out infinite alternate;
         will-change: border-radius, transform, opacity;
 
         &::after,
         &::before {
-            -webkit-animation: Gooey 8s ease-in-out infinite alternate;
             animation: Gooey 8s ease-in-out infinite alternate;
             will-change: border-radius, transform, opacity;
         }
@@ -125,18 +120,18 @@
 
 @mixin gooey-logo($gooey-size: 80px) {
     @include gooey-static($gooey-size);
-    background-image: url('/images/logo/brackets.svg');
+    background-image: url("/images/logo/brackets.svg");
     background-repeat: no-repeat;
     background-size: 60%;
     background-position: 50% 50%;
 }
 
 // #Media Queries
-@mixin for-size($breakpoint, $direction: 'from', $type: 'screen') {
+@mixin for-size($breakpoint, $direction: "from", $type: "screen") {
     @if map-has-key($mq-breakpoints, $breakpoint) {
         $size: map-get($mq-breakpoints, $breakpoint);
 
-        @if $direction == 'from' {
+        @if $direction == "from" {
             @media only #{$type} and (min-width: $size) {
                 @content;
             }
@@ -144,14 +139,22 @@
     }
 }
 
-@mixin svg($color, $background: 'transparent', $padding: 16px) {
-    color: $color;
+// #Ripple
+@mixin ripple-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($mono-white, 0.25);
+    border-radius: 100%;
+    opacity: 0;
+    animation: ripple .5s 1;
+    transform: scale(1);
+}
+
+@mixin svg($color, $background: "transparent", $padding: 8px) {
     background-color: $background;
-    text {
-        display: none;
-    }
-	svg {
-		fill: $color;
-		padding: $padding;
-	}
+    fill: $color;
+    padding: $padding;
 }
