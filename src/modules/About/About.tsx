@@ -21,7 +21,7 @@ const About = (): React.ReactElement => (
             <p>I like building reusable design systems, learning and sharing new things</p>
             <p>When I'm not coding I like to get creative using a range of art mediums and get outdoors, either off on mini adventures or trying to grow things in my garden</p>
         
-            <div className="u-pt+ u-pb+ c-masonry__wrapper">
+            <div className="u-mb+ c-masonry__wrapper">
                 <div className="c-masonry__block c-masonry__span-x u-brand-react">
                     <SVG id="AboutReact" {...Reactjs} />
                 </div>
