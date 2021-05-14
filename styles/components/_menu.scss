@@ -1,7 +1,7 @@
+@import "../settings";
+
 $menu-bar-height: 5px;
 $menu-border-width: 2px;
-$menu-transition-duration: 0.5s;
-$menu-transition-easing: ease-out;
 
 .c-menu__icon {
 	position: relative;
@@ -10,23 +10,13 @@ $menu-transition-easing: ease-out;
     background-color: $color-primary;
 	border: $menu-border-width solid transparent;
     border-radius: 100%;
-    transition: background-color $menu-transition-duration $menu-transition-easing;
+    transition: background-color $transition-duration $transition-easing;
     will-change: background-color;
     z-index: 2000;
 
     &:hover::before {
         content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 999;
-        background: rgba($mono-white, 0.25);
-        border-radius: 100%;
-        opacity: 0;
-        animation: ripple .5s 1;
-        transform: scale(1);
+        @include ripple-effect;
     }
     
     &:focus {
@@ -44,8 +34,7 @@ $menu-transition-easing: ease-out;
 	background: $color-primary-darker;
 	border-radius: 8px;
 	transform: translate3d(0,0,0);
-	transition-duration: $menu-transition-duration;
-    will-change: background-color, transform;
+	transition-duration: $transition-duration;
 }
 
     .c-menu__icon-bar-top {
@@ -56,7 +45,7 @@ $menu-transition-easing: ease-out;
     .c-menu__icon-bar-middle {
         top: calc(50% - #{$menu-bar-height / 2});
         opacity: 1;
-        transition: opacity, left, right, $menu-transition-duration $menu-transition-easing;
+        transition: opacity, left, right,  $transition-duration $transition-easing;
         will-change: opacity;
     }
 
@@ -92,30 +81,28 @@ $menu-transition-easing: ease-out;
     position: fixed;
     top: 0;
     bottom: 0;
+    right: -100%;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: $color-primary-dark;
-    transition: all 0.3s ease;
+    visibility: hidden;
     z-index: 1000;
+    transition: all $transition-duration $transition-easing;
+    will-change: all;
 }
 
     .c-menu__panel--open {
         right: 0;
-        will-change: visibility;
         visibility: visible;
-    }
-
-    .c-menu__panel--closed {
-        right: -100%;
-        will-change: visibility;
-        visibility: hidden;
+        
     }
 
 .c-menu__logo {
     @include gooey-logo();
+    margin: 0 auto 16px;
 }
 
 .c-menu__link-wrapper {
