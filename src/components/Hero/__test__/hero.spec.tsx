@@ -11,7 +11,7 @@ const defaultProps = {
 describe('Hero:', () => {
     const renderComponent = (customProps = defaultProps): RenderResult =>
         render(
-            <Hero title='Hello World!' {...customProps} />
+            <Hero {...customProps} />
         );
     
     afterEach(() => {
@@ -20,7 +20,7 @@ describe('Hero:', () => {
 
     it('Displays a title', () => {
         const { getByTestId } = renderComponent();
-        const title = getByTestId('fd-c-hero__title');
+        const title = getByTestId('c-hero__title');
         expect(title).toBeDefined();
         expect(title.textContent)
             .toBe('Hello World!');
@@ -31,7 +31,7 @@ describe('Hero:', () => {
             ...defaultProps,
             subtitle: 'sponsored by FooBar',
         });
-        const subtitle = getByTestId('fd-c-hero__subtitle');
+        const subtitle = getByTestId('c-hero__subtitle');
         expect(subtitle).toBeDefined();
         expect(subtitle.textContent)
             .toBe('sponsored by FooBar');
@@ -42,7 +42,7 @@ describe('Hero:', () => {
             ...defaultProps,
             strapline: 'it\'s a small world after all',
         });
-        const strapline = getByTestId('fd-c-hero__strapline');
+        const strapline = getByTestId('c-hero__strapline');
         expect(strapline).toBeDefined();
         expect(strapline.textContent)
             .toBe('it\'s a small world after all');

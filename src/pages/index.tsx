@@ -11,7 +11,7 @@ import { scrollTop } from '../utilities/scroll';
 
 import SEOHead from '../components/SEOHead';
 import Header from '../components/Header';
-import PushMenu from '../components/PushMenu';
+import PushMenu from '../components/Menu';
 import Footer from '../components/Footer';
 
 import Home from '../modules/Home';
