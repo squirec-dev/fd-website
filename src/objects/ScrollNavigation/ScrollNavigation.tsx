@@ -19,7 +19,6 @@ const ScrollNavigation = ({
 	const router = useRouter();
 
 	const scrollNavigation = (): void => {
-        console.log("new")
 		if (router.asPath === path) {
 			return;
 		}
