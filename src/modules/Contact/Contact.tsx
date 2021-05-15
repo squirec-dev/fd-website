@@ -2,7 +2,7 @@ import {
     Hashnode,
     Linkedin,
     Twitter
-} from "../../objects/brands";
+} from "../../objects/Brands";
 
 import BubbleLink from "../../components/BubbleLink";
 

@@ -6,7 +6,7 @@ import {
     Reactjs,
     Sass,
     Typescript,
-} from "../../../objects/brands";
+} from "../../../objects/Brands";
 
 const Booking = (): React.ReactElement => (
     <>

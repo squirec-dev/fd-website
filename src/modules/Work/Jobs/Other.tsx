@@ -3,7 +3,7 @@ import {
     Github,
     Hashnode,
     Jsfiddle,
-} from "../../../objects/brands";
+} from "../../../objects/Brands";
 
 import BubbleLink from "../../../components/BubbleLink";
 

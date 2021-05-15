@@ -6,7 +6,7 @@ import {
     Twig,
     Reactjs,
     Javascript,
-} from "../../../objects/brands";
+} from "../../../objects/Brands";
 
 const Sunmaster = (): React.ReactElement => (
     <>
