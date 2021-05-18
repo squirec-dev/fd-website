@@ -37,7 +37,12 @@
     display: none;
 }
 
-.c-bubble-link:hover {
+.c-bubble-link:focus {
+    border: 2px solid $color-accent-light;
+}
+
+.c-bubble-link:hover,
+.c-bubble-link:focus {
     fill: $color-primary-darker;
 
     &::before {
