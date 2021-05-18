@@ -31,7 +31,7 @@ const Accordion = ({
                 aria-expanded={isOpen}
                 className={concatClassNames([
                     "u-p+ c-accordion__header",
-                    `${isOpen ? "c-accordion__header--active" : ""}`,
+                    `${isOpen ? "c-accordion__header--expanded" : ""}`,
                 ])}
                 id={`accordionHeader${id}`}
                 onClick={(evt): void => handleClick(evt)}
@@ -42,14 +42,16 @@ const Accordion = ({
             <div
                 aria-labelledby={`accordionHeader${id}`}
                 className={concatClassNames([
-                    "u-p+ c-accordion__content",
-                    `${isOpen ? "c-accordion__content--active" : ""}`,
+                    "c-accordion__content",
+                    `${isOpen ? "c-accordion__content--expanded" : ""}`,
                 ])}
-                hidden={isOpen === false}
+                aria-hidden={isOpen === false}
                 id={`accordionContent${id}`}
                 role="region"
             >
-                {children}
+                <div className="u-p+">
+                    {children}
+                </div>
             </div>
         </div>
     )
