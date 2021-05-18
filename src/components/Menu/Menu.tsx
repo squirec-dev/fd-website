@@ -1,44 +1,53 @@
 import React, {
+    MutableRefObject,
     ReactElement,
+    RefObject,
+    useRef,
     useState,
 } from 'react';
 
-interface LinkProps {
-    href: string;
-    text: string;
-    onClick: (e: any) => void;
-}
+enum KEYCODE {
+    Tab = 9,
+};
 
 interface MenuProps {
     dispatch: (path: string) => void;
 }
 
-const Link = ({
-    href,
-    text,
-    ...rest
-}: LinkProps): ReactElement => (
-    <a
-        href={href}
-        className="c-menu__link"
-        data-testid="c-menu__link"
-        {...rest}
-    >
-        {text}
-    </a>
-);
-
-
 const Menu = ({
     dispatch,
 }: MenuProps): ReactElement => {
     const [toggle, setToggle] = useState(false);
+    const firstFocus = useRef() as MutableRefObject<HTMLButtonElement>;
+    const lastFocus = useRef() as MutableRefObject<HTMLAnchorElement>;
 
     const handleClick = (e: any): void => {
         e.preventDefault();
-        const newPage = e.target.pathname || '/';
+        const newPage = e.target.getAttribute("href") || '/';
         setToggle(false);
         dispatch(newPage);
+    }
+
+    const trapFocus = (e: any): void => {
+        const isTab = (e.key === 'Tab' || e.keyCode === KEYCODE.Tab);
+        const isBackTab = e.shiftKey;
+        const element = e.target.getAttribute("data-trap");
+        
+        if (!isTab || !element) { 
+            return; 
+        }
+    
+        if (isBackTab && element === "first") {
+            e.preventDefault();
+            lastFocus.current.focus();
+            return;
+        }
+
+        if (!isBackTab && element === "last") {
+            e.preventDefault();
+            firstFocus.current.focus();
+            return;
+        }
     }
     
     return (
@@ -47,7 +56,10 @@ const Menu = ({
                 className={`u-elevation--top u-m+ u-p+ c-menu__icon ${toggle && "c-menu__icon--closed"}`} 
                 data-testid="c-menu__control"
                 onClick={(): void => setToggle(!toggle)}
+                data-trap="first"
+                onKeyDown={(e: any): void => trapFocus(e)}
                 aria-label={`Menu ${toggle ? "open" : "closed"}`}
+                ref={firstFocus}
             >
                 <span className="c-menu__icon-bar c-menu__icon-bar-top"></span>
                 <span className="c-menu__icon-bar c-menu__icon-bar-middle"></span>
@@ -64,16 +76,47 @@ const Menu = ({
                     <div className="c-menu__logo" data-testid="c-menu__logo" aria-hidden={true} />
                     <ul className="c-menu__link-wrapper">
                         <li>
-                            <Link href='/' text='Home' onClick={(e: any): void => handleClick(e)}  />
+                           <a
+                                href='/'
+                                className="c-menu__link"
+                                data-testid="c-menu__link"
+                                onClick={(e: any): void => handleClick(e)}
+                            >
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <Link href='/about' text='About' onClick={(e: any): void => handleClick(e)} />
+                            <a
+                                href='/about'
+                                className="c-menu__link"
+                                data-testid="c-menu__link"
+                                onClick={(e: any): void => handleClick(e)}
+                            >
+                                About
+                            </a>
                         </li>
                         <li>
-                            <Link href='/work' text='Work' onClick={(e: any): void => handleClick(e)} />
+                            <a
+                                href='/work'
+                                className="c-menu__link"
+                                data-testid="c-menu__link"
+                                onClick={(e: any): void => handleClick(e)}
+                            >
+                                Work
+                            </a>
                         </li>
                         <li>
-                            <Link href='/contact' text='Contact' onClick={(e: any): void => handleClick(e)} />
+                            <a
+                                href='/contact'
+                                className="c-menu__link"
+                                data-testid="c-menu__link"
+                                onClick={(e: any): void => handleClick(e)} 
+                                data-trap="last"
+                                onKeyDown={(e: any): void => trapFocus(e)}
+                                ref={lastFocus}
+                            >
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>
