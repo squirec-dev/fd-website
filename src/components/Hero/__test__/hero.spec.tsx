@@ -19,7 +19,10 @@ describe('Hero:', () => {
     });
 
     it('Displays a title', () => {
-        const { getByTestId } = renderComponent();
+        const { getByTestId } = renderComponent({
+            ...defaultProps,
+            title: 'Hello World!',
+        });
         const title = getByTestId('c-hero__title');
         expect(title).toBeDefined();
         expect(title.textContent)
