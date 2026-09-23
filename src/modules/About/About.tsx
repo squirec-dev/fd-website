@@ -6,7 +6,7 @@ import {
     Node,
     Reactjs,
     Typescript
-} from "../../objects/Brands";
+} from "../../objects/brands";
 import USP from "../../components/USP";
 
 const About = (): React.ReactElement => (
