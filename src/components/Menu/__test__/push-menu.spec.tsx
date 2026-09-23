@@ -31,23 +31,26 @@ describe('Menu:', () => {
     });
 
     describe('Controls', () => {
-        it('Displays menu on odd click', () => {
+        it('Displays menu on odd click', async () => {
+            const user = userEvent.setup();
             const { queryAllByTestId, getByTestId } = renderComponent();
             const button = getByTestId('c-menu__control');
-            userEvent.click(button);
+            await user.click(button);
             expect(queryAllByTestId('c-menu__panel').length).toBe(1);
             expect(getByTestId('c-menu__panel')
                 .getAttribute('class')
             ).toContain('c-menu__panel--open');
         });
-        it('Doesn\'t display menu on even click', () => {
+        it('Doesn\'t display menu on even click', async () => {
+            const user = userEvent.setup();
             const { getByTestId } = renderComponent();
             const button = getByTestId('c-menu__control');
-            userEvent.click(button);
+            await user.click(button);
             expect(getByTestId('c-menu__panel')
                 .getAttribute('class')
             ).toContain('c-menu__panel--open');
-            userEvent.click(button);
+            
+            await user.click(button);
             expect(getByTestId('c-menu__panel')
                 .getAttribute('class')
             ).toContain('c-menu__panel--closed');
@@ -65,11 +68,12 @@ describe('Menu:', () => {
             expect(queryAllByTestId('c-menu__link').length).toBe(4);
         });
 
-        it('Closes menu on link click', () => {
+        it('Closes menu on link click', async () => {
+            const user = userEvent.setup();
             const { getByTestId, getByText } = renderComponent();
             const button = getByTestId('c-menu__control');
-            userEvent.click(button);
-            userEvent.click(getByText('Contact'));
+            await user.click(button);
+            await user.click(getByText('Contact'));
             expect(getByTestId('c-menu__panel')
                 .getAttribute('class')
             ).toContain('c-menu__panel--closed');
