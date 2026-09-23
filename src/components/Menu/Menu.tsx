@@ -1,7 +1,5 @@
 import React, {
-    MutableRefObject,
     ReactElement,
-    RefObject,
     useRef,
     useState,
 } from 'react';
@@ -18,8 +16,8 @@ const Menu = ({
     dispatch,
 }: MenuProps): ReactElement => {
     const [toggle, setToggle] = useState(false);
-    const firstFocus = useRef() as MutableRefObject<HTMLButtonElement>;
-    const lastFocus = useRef() as MutableRefObject<HTMLAnchorElement>;
+    const firstFocus = useRef<HTMLButtonElement>(null);
+    const lastFocus = useRef<HTMLAnchorElement>(null);
 
     const handleClick = (e: any): void => {
         e.preventDefault();
@@ -39,13 +37,13 @@ const Menu = ({
     
         if (isBackTab && element === "first") {
             e.preventDefault();
-            lastFocus.current.focus();
+            lastFocus?.current?.focus();
             return;
         }
 
         if (!isBackTab && element === "last") {
             e.preventDefault();
-            firstFocus.current.focus();
+            firstFocus?.current?.focus();
             return;
         }
     }
